@@ -21,10 +21,6 @@ const TaskSchema = {
 const taskCheck = (task = {}) => {
   let now = moment()
   let limit = moment()
-  let _task = {}
-
-  Object.assign(_task, TaskSchema)
-  Object.assign(_task, task)
 
   if (_task.done == false) {
     return false
