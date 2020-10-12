@@ -1,0 +1,13 @@
+node_modules
+.history
+.DS_Store
+.idea
+Thumbs.db
+tmp/
+temp/
+*.log
+*.tmp
+README.md
+yarn.lock
+package-lock.json
+debug.js
