@@ -27,7 +27,6 @@
     "dependencies": {
         "arr-flatten": "1.1.0",
         "date-fns": "2.16.1",
-        "diskdb": "0.1.17",
         "flat-arguments": "1.0.2",
         "jsonfile": "6.0.1",
         "moment": "2.29.1",
