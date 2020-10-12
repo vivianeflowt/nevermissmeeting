@@ -1,0 +1,9 @@
+{
+  "title": "",
+  "link": "",
+  "hour": 0,
+  "minute": 0,
+  "seconds": 0,
+  "done": false,
+  "action": "function () {\n  console.log('action')\n}"
+}

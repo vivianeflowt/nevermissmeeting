@@ -1,0 +1,38 @@
+{
+    "helps": [
+        {
+            "title": "Git com",
+            "sponsor": "Tamires Nunes",
+            "link": "https://zoom.us/j/9187148507",
+            "Slido": "https://app.sli.do/event/rgtrjdac",
+            "hour": 13,
+            "minute": 0,
+            "seconds": 0
+        },
+        {
+            "title": "Git e internet com",
+            "sponsor": "Fernando Soares",
+            "link": "https://zoom.us/j/9187148507",
+            "Slido": "https://app.sli.do/event/rgtrjdac",
+            "hour": 13,
+            "minute": 0,
+            "seconds": 0
+        }
+    ],
+    "call": {
+        "link": "https://trybe.zoom.us/j/5355209477",
+        "havepass": false,
+        "pass": "",
+        "Slido": "",
+        "hour": 14,
+        "minute": 30,
+        "seconds": 0
+    },
+    "task": {
+        "link": "https://app.betrybe.com/course/fundamentals/html-css",
+        "Slido": "",
+        "hour": 14,
+        "minute": 0,
+        "seconds": 0
+    }
+}

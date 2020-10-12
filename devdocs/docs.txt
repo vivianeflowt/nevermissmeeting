@@ -9,5 +9,5 @@ https://github.com/sindresorhus/pkg-dir
 https://github.com/yahoo/serialize-javascript
 https://github.com/arvindr21/diskDB
 
+https://www.npmjs.com/package/node-cron
 
-npm install --save write-json-file load-json-file arr-flatten flat-arguments jsonfile date-fns pkg-dir serialize-javascript

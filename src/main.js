@@ -8,15 +8,10 @@
 
 const TaskFactory = require('./task').TaskFactory
 const helper = require('./helpers')
+const schedule = require('./schedule')
 
 const getPID = function () {
   return process.pid
-}
-
-
-//  Dev-Tools
-module.exports.dev = {
-  TaskFactory
 }
 
 module.exports.getPID = helper.getPID
