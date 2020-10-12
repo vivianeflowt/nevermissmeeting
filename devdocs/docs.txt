@@ -1,0 +1,13 @@
+https://github.com/jonschlinkert/object.defaults
+https://github.com/scottcorgan/flat-arguments
+https://github.com/jonschlinkert/arr-flatten
+https://github.com/sindresorhus/write-json-file
+https://github.com/sindresorhus/load-json-file
+https://github.com/jprichardson/node-jsonfile
+https://github.com/date-fns/date-fns
+https://github.com/sindresorhus/pkg-dir
+https://github.com/yahoo/serialize-javascript
+https://github.com/arvindr21/diskDB
+
+
+npm install --save write-json-file load-json-file arr-flatten flat-arguments jsonfile date-fns pkg-dir serialize-javascript

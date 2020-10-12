@@ -61,4 +61,4 @@ const start = (tickDelay = 5000) => {
 }
 
 //Inicia os Serviço
-start()
+//start()

@@ -2,7 +2,7 @@
     "name": "nevermissmeeting",
     "version": "0.0.1",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "build": "npx prettier --write . && jest",
         "format": "npx prettier --write .",
@@ -18,13 +18,14 @@
         "type": "git",
         "url": "git+https://github.com/vivianeflowt/nevermissmeeting.git"
     },
-    "author": "Viviane Florido <vivianeflowt@gmail.com>",
+    "author": "Viviane Florido / Hugo Braga",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/vivianeflowt/nevermissmeeting/issues"
     },
     "homepage": "https://github.com/vivianeflowt/nevermissmeeting#readme",
     "dependencies": {
+        "arr-flatten": "1.1.0",
         "jest": "26.5.3",
         "moment": "2.29.1",
         "object-hash": "2.0.3",
