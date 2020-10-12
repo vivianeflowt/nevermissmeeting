@@ -9,6 +9,6 @@ console.log('')
 var myArgs = process.argv.slice(2)
 console.log('args: ', myArgs)
 
-console.log(process.argv)
+//console.log(process.argv)
 
 nmm.schedule.loadTasks(_TASK_PATH)
