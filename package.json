@@ -7,7 +7,8 @@
         "build": "nexe -i app.js -o ./build/nmm",
         "start": "node app.js",
         "format": "npx prettier --write .",
-        "test": "jest"
+        "test": "jest",
+        "precommit": "npx prettier --write . && jest"
     },
     "prettier": {
         "trailingComma": "es5",
