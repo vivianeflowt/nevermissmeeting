@@ -9,7 +9,5 @@ console.log('')
 //console.log('args: ', myArgs)
 //console.log(process.argv)
 
-console.log('> loading tasks...')
 nmm.task.loadTasks(_TASK_PATH)
-console.log('> running...')
 nmm.task.start()

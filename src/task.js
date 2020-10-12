@@ -44,7 +44,6 @@ const taskCheck = (task = {}) => {
   return false
 }
 
-
 const loadTasks = function (directory) {
   taskList = []
   if (directory == undefined || directory == null || directory == '') {
@@ -62,9 +61,9 @@ const loadTasks = function (directory) {
 }
 
 const start = function () {
-  cron.schedule('2 * * * * *', () => {
+  cron.schedule('1 * * * * *', () => {
     checkAllTasks()
-    console.log('.')
+    //console.log('.')
   });
 }
 
