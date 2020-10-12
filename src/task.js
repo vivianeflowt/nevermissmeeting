@@ -21,18 +21,16 @@ const TaskSchema = {
 const taskCheck = (task = {}) => {
   let now = moment()
   let limit = moment()
-
-  if (_task.done == false) {
+  if (task.done == true) {
     return false
   }
-
   limit.hour(task.hour)
   limit.minute(task.minute)
   limit.seconds(task.seconds)
 
   const deltaTime = limit.diff(now)
 
-  console.log('.' + deltaTime)
+  console.log('. ' + task.title + ' > ' + deltaTime)
 
   if (deltaTime <= 0) {
     return true
