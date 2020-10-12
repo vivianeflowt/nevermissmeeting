@@ -7,6 +7,8 @@
 'use strict'
 
 const helper = require('./helpers')
-const schedule = require('./schedule')
+const task = require('./task')
 
-module.exports.schedule = schedule
+module.exports = {
+  task
+}

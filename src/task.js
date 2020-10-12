@@ -58,9 +58,29 @@ const loadTasks = function (directory) {
     _task.filename = file
     taskList.push(_task)
   })
-  console.log(taskList)
+  //console.log(taskList)
 }
+
+const start = function () {
+  cron.schedule('2 * * * * *', () => {
+    checkAllTasks()
+    console.log('.')
+  });
+}
+
+const checkAllTasks = function () {
+  taskList.forEach((task) => {
+    if (task.done == false) {
+      if (taskCheck(task)) {
+        task.done = true
+        openLink(task.link)
+      }
+    }
+  })
+}
+
 
 module.exports = {
   loadTasks,
+  start
 }
