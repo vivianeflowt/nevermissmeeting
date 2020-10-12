@@ -10,5 +10,4 @@ console.log('> Never Miss a Meeting!')
 //console.log(process.argv)
 
 nmm.task.loadTasks(_TASK_PATH)
-console.log('running...')
 nmm.task.start()

@@ -21,11 +21,10 @@ const TaskSchema = {
   done: false,
 }
 
-const checkingLog = function (text = '') {
+const checkingLog = function () {
   checkCount++
   console.clear()
-  console.log('> Never Miss a Meeting!')
-  console.log(text + ' (' + checkCount + ')')
+  console.log('[' + checkCount + '] Never Miss a Meeting!')
 }
 const taskCheck = (task = {}) => {
   let now = moment()
@@ -69,7 +68,7 @@ const start = function () {
     console.log('no tasks')
   }
   cron.schedule('1 * * * * *', () => {
-    checkingLog('checking...')
+    checkingLog()
     checkAllTasks()
   });
 }
