@@ -26,15 +26,11 @@
     "homepage": "https://github.com/vivianeflowt/nevermissmeeting#readme",
     "dependencies": {
         "arr-flatten": "1.1.0",
-        "date-fns": "2.16.1",
-        "flat-arguments": "1.0.2",
         "jsonfile": "6.0.1",
         "moment": "2.29.1",
         "node-cron": "2.0.3",
-        "object-hash": "2.0.3",
         "open": "7.3.0",
         "pkg-dir": "4.2.0",
-        "serialize-javascript": "5.0.1",
         "type-detect": "4.0.8"
     },
     "devDependencies": {
