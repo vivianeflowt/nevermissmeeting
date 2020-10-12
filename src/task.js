@@ -9,6 +9,8 @@ const cron = require('node-cron')
 
 var taskList = []
 
+var checkCount = 0
+
 const TaskSchema = {
   filename: '',
   title: '',
@@ -17,6 +19,13 @@ const TaskSchema = {
   minute: 0,
   seconds: 0,
   done: false,
+}
+
+const checkingLog = function (text = '') {
+  checkCount++
+  console.clear()
+  console.log('> Never Miss a Meeting!')
+  console.log(text + ' (' + checkCount + ')')
 }
 const taskCheck = (task = {}) => {
   let now = moment()
@@ -30,7 +39,8 @@ const taskCheck = (task = {}) => {
 
   const deltaTime = limit.diff(now)
 
-  console.log('. ' + task.title + ' > ' + deltaTime)
+  //console.clear()
+  //console.log('. ' + task.title + ' > ' + deltaTime)
 
   if (deltaTime <= 0) {
     return true
@@ -55,9 +65,12 @@ const loadTasks = function (directory) {
 }
 
 const start = function () {
+  if (taskList.length == 0) {
+    console.log('no tasks')
+  }
   cron.schedule('1 * * * * *', () => {
+    checkingLog('checking...')
     checkAllTasks()
-    //console.log('.')
   });
 }
 
