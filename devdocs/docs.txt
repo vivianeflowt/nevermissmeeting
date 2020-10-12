@@ -12,3 +12,7 @@ https://github.com/arvindr21/diskDB
 https://www.npmjs.com/package/node-cron
 
 https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/
+
+https://fabiorogeriosj.com.br/2018/03/01/Criando-executaveis-binarios-com-NodeJs-pkg/
+
+npm install --save-dev pkg

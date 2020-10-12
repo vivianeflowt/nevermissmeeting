@@ -1,6 +1,8 @@
 const path = require('path')
 const nmm = require('./src/main')
 
+const _TASK_PATH = path.join(__dirname, 'tasks')
+
 console.log('-> Never Miss a Meeting!')
 console.log('')
 
@@ -9,4 +11,4 @@ console.log('args: ', myArgs)
 
 console.log(process.argv)
 
-nmm.schedule.loadTasks()
+nmm.schedule.loadTasks(_TASK_PATH)

@@ -5,9 +5,6 @@ const path = require('path')
 const jsonfile = require('jsonfile')
 const getRootPath = require('./helpers').getRootPath
 
-// DEFS
-const __TASK_PATH = path.join(getRootPath(), 'tasks')
-
 var taskList = []
 
 const TaskSchema = {
@@ -20,11 +17,14 @@ const TaskSchema = {
     done: false,
 }
 
-const loadTasks = function () {
+const loadTasks = function (directory) {
     taskList = []
-    fs.readdirSync(__TASK_PATH).forEach(function (file) {
+    if (directory == undefined || directory == null || directory == '') {
+        throw error('needs a task path')
+    }
+    fs.readdirSync(directory).forEach(function (file) {
         let _task = {}
-        let _obj = jsonfile.readFileSync(__TASK_PATH + '/' + file)
+        let _obj = jsonfile.readFileSync(directory + '/' + file)
         Object.assign(_task, TaskSchema)
         Object.assign(_task, _obj)
         _task.filename = file
@@ -33,22 +33,6 @@ const loadTasks = function () {
     console.log(taskList)
 }
 
-const _add = function (schema = {}) {
-    //
-}
-
-const _remove = function (schema = {}) {
-    //
-}
-
-const _list = function () {
-    //
-}
-
 module.exports = {
     loadTasks,
 }
-
-module.exports.add = _add
-module.exports.remove = _remove
-module.exports.list = _list

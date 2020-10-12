@@ -4,7 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "build": "npx prettier --write . && jest",
+        "start": "node app.js",
         "format": "npx prettier --write .",
         "test": "jest"
     },

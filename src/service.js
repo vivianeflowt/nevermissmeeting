@@ -3,10 +3,6 @@ const openLink = require('open')
 const helper = require('./helpers')
 const cron = require('node-cron')
 
-var scheduleList = []
-
-//taskList.push(task2)
-
 const scheduleCheck = (schedule = {}) => {
     let now = moment()
     let limit = moment()
