@@ -21,10 +21,19 @@ const TaskSchema = {
   done: false,
 }
 
-const checkingLog = function () {
+const log = function () {
   checkCount++
   console.clear()
   console.log('[' + checkCount + '] Never Miss a Meeting!')
+  console.log(' ')
+  taskList.forEach((task) => {
+    var _taskdt = task.hour.toString().padStart(2, '0') + ':' + task.minute.toString().padStart(2, '0') + ':' + task.seconds.toString().padStart(2, '0')
+    var _taskstats = '[WAIT]'
+    if (task.done) {
+      var _taskstats = '[DONE]'
+    }
+    console.log(' ' + _taskdt + ' ' + task.title + ' ' + _taskstats)
+  })
 }
 const taskCheck = (task = {}) => {
   let now = moment()
@@ -39,7 +48,6 @@ const taskCheck = (task = {}) => {
   const deltaTime = limit.diff(now)
 
   if (deltaTime <= 0) {
-    console.log('> ' + task.title + ' -> done!')
     return true
   }
   return false
@@ -55,6 +63,9 @@ const loadTasks = function (directory) {
     let _obj = jsonfile.readFileSync(directory + '/' + file)
     Object.assign(_task, TaskSchema)
     Object.assign(_task, _obj)
+    if (_task.title.trim() == '') {
+      _task.title = 'Task'
+    }
     _task.filename = file
     taskList.push(_task)
   })
@@ -66,8 +77,8 @@ const start = function () {
     console.log('no tasks')
   }
   cron.schedule('1 * * * * *', () => {
-    checkingLog()
     checkAllTasks()
+    log()
   });
 }
 
@@ -84,6 +95,7 @@ const checkAllTasks = function () {
 
 
 module.exports = {
+  log,
   loadTasks,
   start
 }
