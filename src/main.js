@@ -7,7 +7,7 @@
 'use strict'
 
 const TaskFactory = require('./task').TaskFactory
-const helpers = require('./helpers')
+const helper = require('./helpers')
 
 const getPID = function () {
   return process.pid
@@ -16,7 +16,7 @@ const getPID = function () {
 
 //  Dev-Tools
 module.exports.dev = {
-  TaskFactory,
+  TaskFactory
 }
 
-module.exports.getPID = helpers.getPID
+module.exports.getPID = helper.getPID
