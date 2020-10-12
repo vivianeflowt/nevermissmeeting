@@ -38,10 +38,8 @@ const taskCheck = (task = {}) => {
 
   const deltaTime = limit.diff(now)
 
-  //console.clear()
-  //console.log('. ' + task.title + ' > ' + deltaTime)
-
   if (deltaTime <= 0) {
+    console.log('> ' + task.title + ' -> done!')
     return true
   }
   return false
