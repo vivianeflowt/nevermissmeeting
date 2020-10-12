@@ -20,3 +20,4 @@ module.exports.dev = {
 }
 
 module.exports.getPID = helper.getPID
+module.exports.getRootPath = helper.getRootPath
