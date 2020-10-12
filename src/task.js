@@ -32,7 +32,7 @@ const log = function () {
     if (task.done) {
       var _taskstats = '[DONE]'
     }
-    console.log(' ' + _taskdt + ' ' + task.title + ' ' + _taskstats)
+    console.log(' [' + _taskdt + '] ' + _taskstats + ' [' + task.title + ']')
   })
 }
 const taskCheck = (task = {}) => {
