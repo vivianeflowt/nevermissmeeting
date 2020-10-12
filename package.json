@@ -4,6 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
+        "build": "nexe -i app.js -o ./build/nmm",
         "start": "node app.js",
         "format": "npx prettier --write .",
         "test": "jest"
@@ -36,6 +37,7 @@
     "devDependencies": {
         "execution-time": "1.4.1",
         "jest": "26.5.2",
+        "nexe": "3.3.7",
         "prettier": "2.1.2"
     }
 }

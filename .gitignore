@@ -11,3 +11,4 @@ README.md
 yarn.lock
 package-lock.json
 debug.js
+build
