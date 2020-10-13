@@ -58,10 +58,6 @@ const taskCheck = (task = {}) => {
 
 const getTaskFileList = function (directory) {
   let fileList = []
-  directory = directory || ''
-  if (directory == '') {
-    return fileList
-  }
   fs.readdirSync(directory).forEach(function (file) {
     fileList.push(file)
   })
@@ -71,10 +67,6 @@ const getTaskFileList = function (directory) {
 const loadTasks = function (directory) {
   taskList = []
   let fileList = []
-  directory = directory || ''
-  if (directory == '') {
-    return
-  }
   fileList = getTaskFileList(directory)
   fileList.forEach(file => {
     let _task = {}
