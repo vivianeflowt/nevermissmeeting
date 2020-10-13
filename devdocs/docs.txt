@@ -15,4 +15,3 @@ https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments
 
 https://pt.stackoverflow.com/questions/59/como-empacotar-um-projeto-node-js-em-um-execut%C3%A1vel
 
-npm install --save-dev pkg

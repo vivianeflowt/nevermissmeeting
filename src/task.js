@@ -6,6 +6,9 @@ const jsonfile = require('jsonfile')
 const moment = require('moment')
 const openLink = require('open')
 const cron = require('node-cron')
+const {
+  duration
+} = require('moment')
 
 var taskList = []
 
@@ -53,12 +56,27 @@ const taskCheck = (task = {}) => {
   return false
 }
 
-const loadTasks = function (directory) {
-  taskList = []
-  if (directory == undefined || directory == null || directory == '') {
-    throw error('needs a task path')
+const getTaskFileList = function (directory) {
+  let fileList = []
+  directory = directory || ''
+  if (directory == '') {
+    return fileList
   }
   fs.readdirSync(directory).forEach(function (file) {
+    fileList.push(file)
+  })
+  return fileList
+}
+
+const loadTasks = function (directory) {
+  taskList = []
+  let fileList = []
+  directory = directory || ''
+  if (directory == '') {
+    return
+  }
+  fileList = getTaskFileList(directory)
+  fileList.forEach(file => {
     let _task = {}
     let _obj = jsonfile.readFileSync(directory + '/' + file)
     Object.assign(_task, TaskSchema)
@@ -68,8 +86,7 @@ const loadTasks = function (directory) {
     }
     _task.filename = file
     taskList.push(_task)
-  })
-  //console.log(taskList)
+  });
 }
 
 const start = function () {
