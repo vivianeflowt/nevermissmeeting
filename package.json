@@ -28,6 +28,7 @@
     "homepage": "https://github.com/vivianeflowt/nevermissmeeting#readme",
     "dependencies": {
         "arr-flatten": "1.1.0",
+        "express": "^4.17.1",
         "jsonfile": "6.0.1",
         "moment": "2.29.1",
         "node-cron": "2.0.3",
